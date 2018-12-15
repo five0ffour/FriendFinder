@@ -9,10 +9,10 @@ var app = express();
 const PORT = process.env.PORT; // heroku
 
 // Sets up the Express app to handle data parsing
-// app.use(express.urlencoded({
-//     extended: true
-// }));
-// app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.json());
 
 // ================================================================================
 // ROUTER
