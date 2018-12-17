@@ -37,14 +37,14 @@ module.exports = function (app) {
     // processSurvey - find out their compatibilty score by measuring the differences between the user and canidate resposne of each question
     function processSurvey(newFriend) {
 
-        let bestMatchScore = 0;
+        let bestMatchScore = (friends.length * 5) + 1;
         for (let i = 0; (i < friends.length); i++) {
             let match = 0;
             for (let j = 0; (j < friends[i].scores.length); j++) {
                 match += Math.abs(newFriend.scores[j] - friends[i].scores[j]);
             }
 
-            if (match > bestMatchScore) {
+            if (match < bestMatchScore) {
                 bestMatchScore = match;
                 bestMatchIdx = i;
             }
