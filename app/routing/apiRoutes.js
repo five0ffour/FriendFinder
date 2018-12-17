@@ -22,22 +22,20 @@ module.exports = function (app) {
         var newFriend = req.body;
 
         // PROCESS - run the survey match logic here.
-        let bestMatchIdx = processSurvey(newFriend);
-        var match = {};
-        match.name = friends[bestMatchIdx].name;
-        match.photo = friends[bestMatchIdx].photo;
+        var bestMatch = processSurvey(newFriend);
 
         // save our new respondant to the permanent list 
         friends.push(newFriend);
 
         // OUTPUT - send the best candidate to the user (as JSON)
-        res.json(match);
+        res.json(bestMatch);
     });
 
     // processSurvey - find out their compatibilty score by measuring the differences between the user and canidate resposne of each question
     function processSurvey(newFriend) {
 
-        let bestMatchScore = (friends.length * 5) + 1;
+        let bestMatchScore = (friends.length * 10);
+        let bestMatchIdx = 0;
         for (let i = 0; (i < friends.length); i++) {
             let match = 0;
             for (let j = 0; (j < friends[i].scores.length); j++) {
@@ -50,7 +48,11 @@ module.exports = function (app) {
             }
         }
 
-        return bestMatchIdx;
+        console.log(friends[bestMatchIdx]);
+        console.log("Score: " + bestMatchScore);
+        console.log("Index: " + bestMatchIdx);
+
+        return friends[bestMatchIdx];
     }
 
 }

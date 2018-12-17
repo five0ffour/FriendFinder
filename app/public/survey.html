@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
+  <!-- CSS -->
+
 </head>
 
 <body>
@@ -35,6 +37,11 @@
 
     <hr>
 
+    <h4>Craziest Belief (Optional)</h4>
+    <input type="text" id="belief" class="form-control" required>
+
+    <hr>
+
     <h3><strong>Question 1</strong></h3>
     <h4>The Illuminati are secretly ruling the world. Have you been to Denver International Airport?!</h4>
     <select class="chosen-select" id="q1">
@@ -47,7 +54,7 @@
     </select>
 
     <h3><strong>Question 2</strong></h3>
-    <h4>The moon landing was faked by NASA on a sound stage. Faked I say! Tesla, Bezos and Branson will prove it.</h4>
+    <h4>The moon landing was faked by NASA on a sound stage. Faked I say! Musk, Bezos and Branson will prove it.</h4>
     <select class="chosen-select" id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -59,7 +66,7 @@
 
 
     <h3><strong>Question 3</strong></h3>
-    <h4>Those aren't contrails in the sky, they're really mind-control chemtrails!</h4>
+    <h4>Those aren't contrails in the sky, they're really government mind-control chemtrails!</h4>
     <select class="chosen-select" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -71,7 +78,7 @@
 
 
     <h3><strong>Question 4</strong></h3>
-    <h4>The government captured a UFO at Roswell, NM in 1947.  How else were we able to invent microwaves and velcro</h4>
+    <h4>The government captured a UFO at Roswell, NM in 1947.  How else were we able to invent microwaves and velcro?</h4>
     <select class="chosen-select" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -95,7 +102,7 @@
 
 
     <h3><strong>Question 6</strong></h3>
-    <h4>Did you read the Da Vinci Code?  It's just another big church cover-up that's still going strong for 2000 years.</h4>
+    <h4>Did you read the Da Vinci Code?  It's just another big church cover-up that's still going strong for over 2000 years.</h4>
     <select class="chosen-select" id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -118,7 +125,7 @@
     </select>
 
     <h3><strong>Question 8</strong></h3>
-    <h4>X-files is really a documentary and black unmarked helicopters are patroling everywhere.</h4>
+    <h4>Mulder & Scully were right, X-files is really a documentary and black unmarked helicopters are patroling everywhere.</h4>
     <select class="chosen-select" id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -129,7 +136,7 @@
     </select>
 
     <h3><strong>Question 9</strong></h3>
-    <h4>Global warming is a government hoak to divert money from big oil to big solar.  Is it hot in here?</h4>.</h4>
+    <h4>Global warming is a government-media scam to divert money from big oil to green tech.  Is it me or is it getting hot in here?</h4>.</h4>
     <select class="chosen-select" id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -140,7 +147,7 @@
     </select>
 
     <h3><strong>Question 10</strong></h3>
-    <h4>We are all living in a multi-verse and reality is just on big simulation.  Where can I get my baseline file saved?</h4>
+    <h4>We are all living in a multiverse and reality is just one big simulation.  Where can I get my baseline file saved?</h4>
     <select class="chosen-select" id="q10">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -180,6 +187,7 @@
         <div class="modal-body">
           <h2 id="match-name"></h2>
           <img id="match-img" src="" alt="">
+          <h2 id="match-belief"></h2>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -240,6 +248,7 @@
         var userData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
+          belief: $("#belief").val();
           scores: [
             $("#q1").val(),
             $("#q2").val(),
@@ -260,6 +269,7 @@
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
+          $("#match-belief").text(data.belief);
 
           // Show the modal with the best match
           $("#results-modal").modal("toggle");
