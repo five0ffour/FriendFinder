@@ -13,6 +13,7 @@ The application itself is a client-server based application. It uses a Bootstrap
 - **htmlRoutes.js** Route handlers to server web pages back to the front end  
 - **home.html:** Title page of the application and launch button 
 - **survey.html:** Survey questionaire and popup dialog box user interface  
+- **friend.js:** The in memory object based database of candidates
    
  ### How to install/run the application  
 1. Download and install the latest version of Node.js following the website instructions for your platform  
