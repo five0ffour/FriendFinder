@@ -10,14 +10,8 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <!-- Font Awesome Glyphicons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-  <!-- Chosen -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-
-  <!-- CSS -->
 
 </head>
 
@@ -29,132 +23,130 @@
     <hr>
 
     <h3><strong>About You</strong></h3>
-    <h4>Name (Required)</h4>
+    <h4>Your Name</h4>
     <input type="text" id="name" class="form-control" required>
+    <br>
 
-    <h4>Link to Photo Image (Required)</h4>
+    <h4>A nice Photo of yourself (URL) </h4>
     <input type="text" id="photo" class="form-control" required>
+    <br>
+
+    <h4>Your Craziest Belief</h4>
+    <input type="text" id="belief" class="form-control" >
+    <br>
 
     <hr>
 
-    <h4>Craziest Belief (Optional)</h4>
-    <input type="text" id="belief" class="form-control" required>
-
+    <h4><strong>1)</strong> The Illuminati are secretly ruling the world. Have you been to Denver International Airport?!</h4>
+    <select class="form-control dropdown-sel" id="question1" required>
+      <option value=""></option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
+    </select>
     <hr>
 
-    <h3><strong>Question 1</strong></h3>
-    <h4>The Illuminati are secretly ruling the world. Have you been to Denver International Airport?!</h4>
-    <select class="chosen-select" id="q1">
+    <h4><strong>2)</strong> The moon landing was faked by NASA on a sound stage. Faked I say!</h4>
+    <select class="form-control dropdown-sel" id="question2" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-    <h3><strong>Question 2</strong></h3>
-    <h4>The moon landing was faked by NASA on a sound stage. Faked I say! Musk, Bezos and Branson will prove it.</h4>
-    <select class="chosen-select" id="q2">
+    <h4><strong>3)</strong> Those aren't contrails in the sky, they're really government mind-control <i>chem</i>trails! Go ahead, drink that flouridated water too.</h4>
+    <select class="form-control dropdown-sel" id="question3" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-
-    <h3><strong>Question 3</strong></h3>
-    <h4>Those aren't contrails in the sky, they're really government mind-control chemtrails!</h4>
-    <select class="chosen-select" id="q3">
+    <h4><strong>4)</strong> The government captured a UFO at Roswell, New Mexico in 1947. How else were we able to invent microwaves and velcro?</h4>
+    <select class="form-control dropdown-sel" id="question4" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-
-    <h3><strong>Question 4</strong></h3>
-    <h4>The government captured a UFO at Roswell, NM in 1947.  How else were we able to invent microwaves and velcro?</h4>
-    <select class="chosen-select" id="q4">
+    <h4><strong>5)</strong> MK-Ultra was a real and successful CIA mind control program. Shhh, they're listening...</h4>
+    <select class="form-control dropdown-sel" id="question5" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-
-    <h3><strong>Question 5</strong></h3>
-    <h4>MK-Ultra was a real and successful CIA mind control program. Shhh, they're listening...</h4>
-    <select class="chosen-select" id="q5">
+    <h4><strong>6)</strong> Did you read the Da Vinci Code? It's just another big church cover-up that's still going strong for over 2000
+      years.</h4>
+    <select class="form-control dropdown-sel" id="question6" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-
-    <h3><strong>Question 6</strong></h3>
-    <h4>Did you read the Da Vinci Code?  It's just another big church cover-up that's still going strong for over 2000 years.</h4>
-    <select class="chosen-select" id="q6">
+    <h4><strong>7)</strong> Paul is dead, and I am the Walrus. Grab that Revolution #9 album and play it backwards, you'll believe it too.</h4>
+    <select class="form-control dropdown-sel" id="question7" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-
-    <h3><strong>Question 7</strong></h3>
-    <h4>Paul is dead, and I am the Walrus. Grab that White Album and play it backwards, you'll it believe too.</h4>
-    <select class="chosen-select" id="q7">
+    <h4><strong>8)</strong> Mulder & Scully were right, 'The X-Files' is really a documentary and black unmarked helicopters are patroling
+      the skies.</h4>
+    <select class="form-control dropdown-sel" id="question8" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-    <h3><strong>Question 8</strong></h3>
-    <h4>Mulder & Scully were right, X-files is really a documentary and black unmarked helicopters are patroling everywhere.</h4>
-    <select class="chosen-select" id="q8">
+    <h4><strong>9)</strong> Global warming is a government/media scam to divert money from big oil to green tech. Is it me or is it getting
+      hot in here?</h4>.</h4>
+    <select class="form-control dropdown-sel" id="question9" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
+    <hr>
 
-    <h3><strong>Question 9</strong></h3>
-    <h4>Global warming is a government-media scam to divert money from big oil to green tech.  Is it me or is it getting hot in here?</h4>.</h4>
-    <select class="chosen-select" id="q9">
+    <h4><strong>10)</strong> None of this is real and we're all living in one big simulation. Now where can I go to get our baseline saved?</h4>
+    <select class="form-control dropdown-sel" id="question10" required>
       <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-    <h3><strong>Question 10</strong></h3>
-    <h4>We are all living in a multiverse and reality is just one big simulation.  Where can I get my baseline file saved?</h4>
-    <select class="chosen-select" id="q10">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
+      <option value="1">1 - No Way!</option>
+      <option value="2">2 - Not likely</option>
+      <option value="3">3 - Maybe</option>
+      <option value="4">4 - Likey</option>
+      <option value="5">5 - Heck Yeah!</option>
     </select>
 
     <br>
@@ -174,15 +166,16 @@
 
   </div>
 
-  <!-- Modal -->
-  <div id="results-modal" class="modal fade" role="dialog">
+  <!-- Modals -->
+
+  <!-- Survey Match Pop-up Box -->
+  <div id="match-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Best Match</strong></h2>
+          <h2 class="modal-title"><strong>Here is someone as crazy as you</strong></h2>
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
@@ -197,86 +190,84 @@
     </div>
   </div>
 
+  <!-- Alert Pop-up Box -->
+  <div id="alert-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Survey Question Check</strong></h2>
+        </div>
+        <div class="modal-body">
+          <p>Please answer all of the questions to ensure we provide accurate results</p>
+          <br>
+          <p>We'll need <strong>name, photo and all ten survey questions</strong> answered to process the survey</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="text/javascript">
-
-    // Chosen CSS
-    var config = {
-      ".chosen-select": {},
-      ".chosen-select-deselect": {
-        allow_single_deselect: true
-      },
-      ".chosen-select-no-single": {
-        disable_search_threshold: 10
-      },
-      ".chosen-select-no-results": {
-        no_results_text: "Oops, nothing found!"
-      },
-      ".chosen-select-width": {
-        width: "95%"
-      }
-    };
-
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
 
     // Capture the form inputs
     $("#submit").on("click", function (event) {
+      
+      // Disable the enter key
       event.preventDefault();
 
+      //----------------
       // Form validation
       function validateForm() {
         var isValid = true;
+
         $(".form-control").each(function () {
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-
-        $(".chosen-select").each(function () {
-
-          if ($(this).val() === "") {
+          var attr = $(this).attr('required');
+          if (!(typeof attr === typeof undefined || attr === false || attr === "undefined") &&
+              $(this).val() === "") {
             isValid = false;
           }
         });
         return isValid;
       }
-
+  
       // If all required fields are filled
       if (validateForm()) {
         // Create an object for the user"s data
         var userData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
-          belief: $("#belief").val();
+          belief: $("#belief").val(),
           scores: [
-            $("#q1").val(),
-            $("#q2").val(),
-            $("#q3").val(),
-            $("#q4").val(),
-            $("#q5").val(),
-            $("#q6").val(),
-            $("#q7").val(),
-            $("#q8").val(),
-            $("#q9").val(),
-            $("#q10").val()
+            $("#question1").val(),
+            $("#question2").val(),
+            $("#question3").val(),
+            $("#question4").val(),
+            $("#question5").val(),
+            $("#question6").val(),
+            $("#question7").val(),
+            $("#question8").val(),
+            $("#question9").val(),
+            $("#question10").val()
           ]
         };
 
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function (data) {
 
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          // Grab the result from the AJAX post with the name, photo and brief quote to display.
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
           $("#match-belief").text(data.belief);
 
-          // Show the modal with the best match
-          $("#results-modal").modal("toggle");
+          // Manually show the modal with our match results
+          $("#match-modal").modal("toggle");
 
         });
       } else {
-        alert("Please fill out all fields before submitting!");
+        $("#alert-modal").modal("toggle");
       }
     });
   </script>

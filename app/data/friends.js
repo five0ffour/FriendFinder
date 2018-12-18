@@ -154,7 +154,7 @@ var friends = [
   },
   {
     "name":"Alfred Wegener",
-    "belief": "Continent are drifting apart",
+    "belief": "Continents are drifting apart",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/6/65/Alfred_Wegener_ca.1924-30.jpg",
     "scores":[
         4,

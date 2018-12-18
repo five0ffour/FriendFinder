@@ -32,9 +32,10 @@ module.exports = function (app) {
     });
 
     // processSurvey - find out their compatibilty score by measuring the differences between the user and canidate resposne of each question
+    //               - scoring works like golf, the lower the number the closer the match (least deviation)
     function processSurvey(newFriend) {
 
-        let bestMatchScore = (friends.length * 10);
+        let bestMatchScore = Number.MAX_SAFE_INTEGER // outrageously high value
         let bestMatchIdx = 0;
         for (let i = 0; (i < friends.length); i++) {
             let match = 0;
