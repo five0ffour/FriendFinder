@@ -5,14 +5,14 @@ A full stack twist on a dating app implemented with node express and javascript
 Friend Finder is a personality matching service app based on the premise that there are a lot of conspiracy theories out there. Maybe we can match people up based on what they think of them. Big Foot? UFO's? Atlantis? What you think of these may reveal a lot about yourself.  Besides, can they all be wrong?
 
 ## Friend Finder capabilities
-The application itself is a client-server based application. It uses a BootStrap front end to ask a series of questions and populates an in memory object database of the results. The algorithm matches up the responses of the users against the database and looks for a match based on the least variance.  The best candidate is returned and served up the the user in a dialog box. Finally, the user's responses themselves are added to the database for future queries.
+The application itself is a client-server based application. It uses a Bootstrap front end to ask a series of questions and populates an in memory object database of the results. The algorithm matches up the responses of the users against the database and looks for a match based on the least variance.  The best candidate is returned and served up the the user in a dialog box. Finally, the user's responses themselves are added to the database for future queries.
   
 ### Developer notes  
 - **server.js:** Express web server configuration info and route setup  
 - **apiRoutes.js:** Route handlers for GET and POST requests  
-- **htmlRoutes.js"** Route handlers to server web pages back to the front end  
-- **home.html:** The title page of the application   
-- **survey.html:** The survey questionaire and popup dialog box user interface  
+- **htmlRoutes.js** Route handlers to server web pages back to the front end  
+- **home.html:** Title page of the application and launch button 
+- **survey.html:** Survey questionaire and popup dialog box user interface  
    
  ### How to install/run the application  
 1. Download and install the latest version of Node.js following the website instructions for your platform  
