@@ -29,9 +29,9 @@
     height: 600px;
     }
 
-    .match-img{
-    width: auto;
-    height: 100%;
+    #match-img{
+    width: 400px;
+    height: auto;
     }
   </style>
 
@@ -184,8 +184,7 @@
 
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-        aria-hidden="true"></i>
-      Submit</button>
+        aria-hidden="true"></i> Submit</button>
 
     <hr>
     <footer class="footer">
@@ -201,11 +200,10 @@
   <!-- Survey Match Pop-up Box -->
   <div id="match-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Here is someone as crazy as you</strong></h2>
+          <h2 class="modal-title"><strong>Someone as crazy as you</strong></h2>
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
@@ -216,90 +214,89 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- Alert Pop-up Box -->
-  <div id="alert-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Survey Question Check</strong></h2>
-        </div>
-        <div class="modal-body">
-          <p>Please answer all of the questions to ensure we provide accurate results</p>
-          <br>
-          <p>We'll need <strong>name, photo and all ten survey questions</strong> answered to process the survey</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <!-- Alert Pop-up Box -->
+    <div id="alert-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Survey Question Check</strong></h2>
+          </div>
+          <div class="modal-body">
+            <p>Please answer all of the questions to ensure we provide accurate results</p>
+            <br>
+            <p>We'll need <strong>name, photo and all ten survey questions</strong> answered to process the survey</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script type="text/javascript">
-    // Capture the form inputs
-    $("#submit").on("click", function (event) {
+    <script type="text/javascript">
+      // Capture the form inputs
+      $("#submit").on("click", function (event) {
 
-      // Disable the enter key
-      event.preventDefault();
+        // Disable the enter key
+        event.preventDefault();
 
-      //----------------
-      // Form validation
-      function validateForm() {
-        var isValid = true;
+        //----------------
+        // Form validation
+        function validateForm() {
+          var isValid = true;
 
-        $(".form-control").each(function () {
-          var attr = $(this).attr('required');
-          if (!(typeof attr === typeof undefined || attr === false || attr === "undefined") &&
-            $(this).val() === "") {
-            isValid = false;
-          }
-        });
-        return isValid;
-      }
+          $(".form-control").each(function () {
+            var attr = $(this).attr('required');
+            if (!(typeof attr === typeof undefined || attr === false || attr === "undefined") &&
+              $(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
 
-      // If all required fields are filled
-      if (validateForm()) {
-        // Create an object for the user"s data
-        var userData = {
-          name: $("#name").val(),
-          photo: $("#photo").val(),
-          belief: $("#belief").val(),
-          scores: [
-            $("#question1").val(),
-            $("#question2").val(),
-            $("#question3").val(),
-            $("#question4").val(),
-            $("#question5").val(),
-            $("#question6").val(),
-            $("#question7").val(),
-            $("#question8").val(),
-            $("#question9").val(),
-            $("#question10").val()
-          ]
-        };
+        // If all required fields are filled
+        if (validateForm()) {
+          // Create an object for the user"s data
+          var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            belief: $("#belief").val(),
+            scores: [
+              $("#question1").val(),
+              $("#question2").val(),
+              $("#question3").val(),
+              $("#question4").val(),
+              $("#question5").val(),
+              $("#question6").val(),
+              $("#question7").val(),
+              $("#question8").val(),
+              $("#question9").val(),
+              $("#question10").val()
+            ]
+          };
 
-        // AJAX post the data to the friends API.
-        $.post("/api/friends", userData, function (data) {
+          // AJAX post the data to the friends API.
+          $.post("/api/friends", userData, function (data) {
 
-          // Grab the result from the AJAX post with the name, photo and brief quote to display.
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.photo);
-          $("#match-belief").text(data.belief);
+            // Grab the result from the AJAX post with the name, photo and brief quote to display.
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
+            $("#match-belief").text(data.belief);
 
-          // Manually show the modal with our match results
-          $("#match-modal").modal("toggle");
+            // Manually show the modal with our match results
+            $("#match-modal").modal("toggle");
 
-        });
-      } else {
-        $("#alert-modal").modal("toggle");
-      }
-    });
-  </script>
+          });
+        } else {
+          $("#alert-modal").modal("toggle");
+        }
+      });
+    </script>
 
 </body>
 

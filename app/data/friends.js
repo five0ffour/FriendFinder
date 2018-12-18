@@ -1,7 +1,7 @@
 var friends = [
 {
     "name":"Christopher Columbus",
-    "belief": "The world is actually round",
+    "belief": "Believed the world is actually round",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/c/c2/Portrait_of_a_Man%2C_Said_to_be_Christopher_Columbus.jpg",
     "scores":[
         1,
@@ -18,7 +18,7 @@ var friends = [
   },
   {
     "name":"Giordano Bruno",
-    "belief": "Earth is not the center of the universe",
+    "belief": "Believed the Earth is not the center of the universe",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/1/15/Giordano_Bruno.jpg",
     "scores":[
         2,
@@ -35,7 +35,7 @@ var friends = [
   },
   {
     "name":"The Wright Brothers",
-    "belief" : "Machines could be made to fly",
+    "belief" : "Believed machines could be made to fly",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/0/02/Wright_Brothers_in_1910.jpg",
     "scores":[
         5,
@@ -52,7 +52,7 @@ var friends = [
   },
   {
     "name":"William Harvey",
-    "belief": "Blood is pumped by the heart and travelled through arteries",
+    "belief": "Believed blood is pumped by the heart and travelled through arteries",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/4/42/William_Harvey_2.jpg",
     "scores":[
         5,
@@ -69,7 +69,7 @@ var friends = [
   },
   {
     "name":"Galileo Galilei",
-    "belief": "The Earth rotates around the sun",
+    "belief": "Believed the Earth rotates around the sun",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg",
     "scores":[
         4,
@@ -86,7 +86,7 @@ var friends = [
   },
   {
     "name":"Albert Einstein",
-    "belief": "Time and space are relative",
+    "belief": "Believed time and space are relative",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg",
     "scores":[
         5,
@@ -103,7 +103,7 @@ var friends = [
   },
   {
     "name":"Nikola Tesla",
-    "belief": "Electricity and wireless communications can be transmitted around the globe",
+    "belief": "Believed electricity and wireless communications can be transmitted around the globe",
     "photo":"https://en.wikipedia.org/wiki/Nikola_Tesla#/media/File:N.Tesla.JPG",
     "scores":[
         5,
@@ -120,7 +120,7 @@ var friends = [
   },
   {
     "name":"Charles Babbage",
-    "belief": "A machine could be built to do general computations",
+    "belief": "Believed a machine could be built to do general computations",
     "photo":"https://en.wikipedia.org/wiki/Charles_Babbage#/media/File:Charles_Babbage_-_1860.jpg",
     "scores":[
         4,
@@ -137,7 +137,7 @@ var friends = [
   },
   {
     "name":"Charles Darwin",
-    "belief": "Species evolve over time",
+    "belief": "Believed species evolve over time",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/2/2e/Charles_Darwin_seated_crop.jpg",
     "scores":[
         2,
@@ -154,7 +154,7 @@ var friends = [
   },
   {
     "name":"Alfred Wegener",
-    "belief": "Continents are drifting apart",
+    "belief": "Believed continents are drifting apart",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/6/65/Alfred_Wegener_ca.1924-30.jpg",
     "scores":[
         4,
