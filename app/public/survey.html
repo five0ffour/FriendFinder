@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>FriendFinder</title>
+  <title>Friend Finder</title>
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -12,6 +12,28 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- CSS -->
+  <style>
+    .img-responsive {
+    max-height: calc(100vh - 225px);
+    }
+
+    .modal {
+    text-align: center;
+    }
+
+    .modal-dialog {
+    display: inline-block;
+    width: auto;
+    height: 600px;
+    }
+
+    .match-img{
+    width: auto;
+    height: 100%;
+    }
+  </style>
 
 </head>
 
@@ -31,13 +53,14 @@
     <input type="text" id="photo" class="form-control" required>
     <br>
 
-    <h4>Your Craziest Belief</h4>
-    <input type="text" id="belief" class="form-control" >
+    <h4>Your Craziest Belief (optional)</h4>
+    <input type="text" id="belief" class="form-control">
     <br>
 
     <hr>
 
-    <h4><strong>1)</strong> The Illuminati are secretly ruling the world. Have you been to Denver International Airport?!</h4>
+    <h4><strong>1)</strong> The Illuminati are secretly ruling the world. Have you been to Denver International
+      Airport?!</h4>
     <select class="form-control dropdown-sel" id="question1" required>
       <option value=""></option>
       <option value="1">1 - No Way!</option>
@@ -59,7 +82,8 @@
     </select>
     <hr>
 
-    <h4><strong>3)</strong> Those aren't contrails in the sky, they're really government mind-control <i>chem</i>trails! Go ahead, drink that flouridated water too.</h4>
+    <h4><strong>3)</strong> Those aren't contrails in the sky, they're really government mind-control <i>chem</i>trails!
+      Go ahead, drink that flouridated water too.</h4>
     <select class="form-control dropdown-sel" id="question3" required>
       <option value=""></option>
       <option value="1">1 - No Way!</option>
@@ -70,7 +94,8 @@
     </select>
     <hr>
 
-    <h4><strong>4)</strong> The government captured a UFO at Roswell, New Mexico in 1947. How else were we able to invent microwaves and velcro?</h4>
+    <h4><strong>4)</strong> The government captured a UFO at Roswell, New Mexico in 1947. How else were we able to
+      invent microwaves and velcro?</h4>
     <select class="form-control dropdown-sel" id="question4" required>
       <option value=""></option>
       <option value="1">1 - No Way!</option>
@@ -92,7 +117,8 @@
     </select>
     <hr>
 
-    <h4><strong>6)</strong> Did you read the Da Vinci Code? It's just another big church cover-up that's still going strong for over 2000
+    <h4><strong>6)</strong> Did you read the Da Vinci Code? It's just another big church cover-up that's still going
+      strong for over 2000
       years.</h4>
     <select class="form-control dropdown-sel" id="question6" required>
       <option value=""></option>
@@ -104,7 +130,8 @@
     </select>
     <hr>
 
-    <h4><strong>7)</strong> Paul is dead, and I am the Walrus. Grab that Revolution #9 album and play it backwards, you'll believe it too.</h4>
+    <h4><strong>7)</strong> Paul is dead, and I am the Walrus. Grab that Revolution #9 album and play it backwards,
+      you'll believe it too.</h4>
     <select class="form-control dropdown-sel" id="question7" required>
       <option value=""></option>
       <option value="1">1 - No Way!</option>
@@ -115,7 +142,8 @@
     </select>
     <hr>
 
-    <h4><strong>8)</strong> Mulder & Scully were right, 'The X-Files' is really a documentary and black unmarked helicopters are patroling
+    <h4><strong>8)</strong> Mulder & Scully were right, 'The X-Files' is really a documentary and black unmarked
+      helicopters are patroling
       the skies.</h4>
     <select class="form-control dropdown-sel" id="question8" required>
       <option value=""></option>
@@ -127,7 +155,8 @@
     </select>
     <hr>
 
-    <h4><strong>9)</strong> Global warming is a government/media scam to divert money from big oil to green tech. Is it me or is it getting
+    <h4><strong>9)</strong> Global warming is a government/media scam to divert money from big oil to green tech. Is it
+      me or is it getting
       hot in here?</h4>.</h4>
     <select class="form-control dropdown-sel" id="question9" required>
       <option value=""></option>
@@ -139,7 +168,8 @@
     </select>
     <hr>
 
-    <h4><strong>10)</strong> None of this is real and we're all living in one big simulation. Now where can I go to get our baseline saved?</h4>
+    <h4><strong>10)</strong> None of this is real and we're all living in one big simulation. Now where can I go to get
+      our baseline saved?</h4>
     <select class="form-control dropdown-sel" id="question10" required>
       <option value=""></option>
       <option value="1">1 - No Way!</option>
@@ -211,10 +241,9 @@
   </div>
 
   <script type="text/javascript">
-
     // Capture the form inputs
     $("#submit").on("click", function (event) {
-      
+
       // Disable the enter key
       event.preventDefault();
 
@@ -226,13 +255,13 @@
         $(".form-control").each(function () {
           var attr = $(this).attr('required');
           if (!(typeof attr === typeof undefined || attr === false || attr === "undefined") &&
-              $(this).val() === "") {
+            $(this).val() === "") {
             isValid = false;
           }
         });
         return isValid;
       }
-  
+
       // If all required fields are filled
       if (validateForm()) {
         // Create an object for the user"s data

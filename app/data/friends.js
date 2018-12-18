@@ -7,12 +7,12 @@ var friends = [
         1,
         1,
         1,
-        4,
-        5,
         1,
-        2,
-        5,
-        4,
+        1,
+        1,
+        1,
+        1,
+        1,
         1
       ]
   },
@@ -21,16 +21,16 @@ var friends = [
     "belief": "Earth is not the center of the universe",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/1/15/Giordano_Bruno.jpg",
     "scores":[
-        4,
-        3,
-        3,
-        1,
         2,
-        3,
-        3,
-        5,
-        4,
-        3
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ]
   },
   {
@@ -38,15 +38,15 @@ var friends = [
     "belief" : "Machines could be made to fly",
     "photo":"https://upload.wikimedia.org/wikipedia/commons/0/02/Wright_Brothers_in_1910.jpg",
     "scores":[
-        2,
-        4,
-        1,
-        1,
         5,
-        2,
-        2,
-        2,
-        1,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
         5
       ]
   },
