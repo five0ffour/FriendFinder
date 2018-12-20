@@ -1,7 +1,8 @@
 # FriendFinder - Conspiracy Style
 A full stack twist on a dating app implemented with node, express, bootstrap and javascript
-  
     
+Try it at:  https://mbg-friendfinder.herokuapp.com/  
+
 ## Overview  
 Friend Finder is a personality matching service app based on the premise that there are a lot of conspiracy theories out there. Maybe we can match people up based on what they think of them. Big Foot? UFO's? Atlantis? What you think of these may reveal a lot about yourself.  Besides, can all those theories be wrong?
   
