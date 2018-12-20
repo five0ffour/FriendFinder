@@ -26,7 +26,7 @@ module.exports = function (app) {
 
         // save our new respondant to the permanent list 
         friends.push(newFriend);
-
+        
         // OUTPUT - send the best candidate to the user (as JSON)
         res.json(bestMatch);
     });

@@ -1,12 +1,23 @@
 # FriendFinder - Conspiracy Style
-A full stack twist on a dating app implemented with node express and javascript
+A full stack twist on a dating app implemented with node, express, bootstrap and javascript
 
 ## Overview  
-Friend Finder is a personality matching service app based on the premise that there are a lot of conspiracy theories out there. Maybe we can match people up based on what they think of them. Big Foot? UFO's? Atlantis? What you think of these may reveal a lot about yourself.  Besides, can they all be wrong?
+Friend Finder is a personality matching service app based on the premise that there are a lot of conspiracy theories out there. Maybe we can match people up based on what they think of them. Big Foot? UFO's? Atlantis? What you think of these may reveal a lot about yourself.  Besides, can all those theories be wrong?
 
 ## Friend Finder capabilities
 The application itself is a client-server based application. It uses a Bootstrap front end to ask a series of questions and populates an in memory object database of the results. The algorithm matches up the responses of the users against the database and looks for a match based on the least variance.  The best candidate is returned and served up the the user in a dialog box. Finally, the user's responses themselves are added to the database for future queries.
-  
+
+Some specifics:
+- POST submission to add new profiles to the character list
+- Input validation to prevent incomplete entries
+- Modal pop-ups for more attractive alerts
+- Resposive layout to handle mobile devices
+- API test and GitHub reference
+- Suitable for Heroku or localhost deployment
+
+# Screenshot
+![Screenshot](/app/images/homescreen.png?raw=true "Home Page")
+
 ### Developer notes  
 - **server.js:** Express web server configuration info and route setup  
 - **apiRoutes.js:** Route handlers for GET and POST requests  
