@@ -8,7 +8,7 @@ Friend Finder is a personality matching service app based on the premise that th
 The application itself is a client-server based application. It uses a Bootstrap front end to ask a series of questions and populates an in memory object database of the results. The algorithm matches up the responses of the users against the database and looks for a match based on the least variance.  The best candidate is returned and served up the the user in a dialog box. Finally, the user's responses themselves are added to the database for future queries.
 
 Some specifics:
-- POST submission to add new profiles to the character list
+- Submissions add new profiles to the character list to match against future surveys
 - Input validation to prevent incomplete entries
 - Modal pop-ups for more attractive alerts
 - Resposive layout to handle mobile devices
